@@ -21,7 +21,7 @@ class RomanNumeralsConverter
                         );
         $string = "";
 
-        foreach($magic_numbers as $key=>$val) {
+        foreach ($magic_numbers as $key=>$val) {
             if (($num = floor($number/$val)) > 0) {
                 $string .= str_repeat($key, $num);
                 $number %= $val; 
