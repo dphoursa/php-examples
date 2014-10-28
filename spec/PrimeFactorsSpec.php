@@ -7,11 +7,6 @@ use Prophecy\Argument;
 
 class PrimeFactorsSpec extends ObjectBehavior
 {
-    function it_is_initializable()
-    {
-        $this->shouldHaveType('PrimeFactors');
-    }
-    
     function it_calc_one_has_no_primary()
     {
         $this->generate("1")->shouldReturn([]);
