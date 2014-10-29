@@ -7,11 +7,11 @@ class LargestPrimeFactor
         $largest = 0;
         
         for ($i = 2; $number >= $i; $i++) {
+            if ($number % $i == 0 && $largest < $i) {
+                $largest = $i;
+            }
             while ($number % $i == 0) {
                 $number = $number / $i;
-                if ($largest < $i) {
-                    $largest = $i;
-                }
             }
         }
         
