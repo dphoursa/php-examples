@@ -16,32 +16,32 @@ class SmallestMultipleSpec extends ObjectBehavior
 {
     function it_computes_number_divisible_by_all_numbers_from_1_to_1()
     {
-        $this->find(1,1)->shouldEqual(1);
+        $this->find(1)->shouldEqual(1);
     }
     
     function it_computes_number_divisible_by_all_numbers_from_1_to_2()
     {
-        $this->find(1,2)->shouldEqual(2);
+        $this->find(2)->shouldEqual(2);
     }
     
     function it_computes_number_divisible_by_all_numbers_from_1_to_3()
     {
-        $this->find(1,3)->shouldEqual(6);
+        $this->find(3)->shouldEqual(6);
     }
     
     function it_computes_number_divisible_by_all_numbers_from_1_to_4()
     {
-        $this->find(1,4)->shouldEqual(12);
+        $this->find(4)->shouldEqual(12);
     }
 
     function it_computes_number_divisible_by_all_numbers_from_1_to_10()
     {
-        $this->find(1,10)->shouldEqual(2520);
+        $this->find(10)->shouldEqual(2520);
     }
 
     function it_computes_number_divisible_by_all_numbers_from_1_to_20()
     {
-        $this->find(1,20)->shouldEqual(232792560);
+        $this->find(20)->shouldEqual(232792560);
     }
     
 }
