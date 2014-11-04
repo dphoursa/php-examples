@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Palindrome class finds the longest palindrome in a given string
  * 
@@ -9,7 +10,6 @@
 class Palindrome
 {
     /**
-     *
      * Finds the longest palindrome in a given string
      * 
      * @param string $string
