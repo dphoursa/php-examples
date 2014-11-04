@@ -1,8 +1,21 @@
 <?php
 
+/**
+ * Palindrome class finds the longest palindrome in a given string
+ * 
+ * 
+ * @package    php-examples
+ * @author     dphoursa <d.phoursa@outlook.com>
+ */
 class Palindrome
 {
-
+    /**
+     * Finds the longest palindrome in a given string
+     * 
+     * @param string $string
+     * @return string
+     * 
+     */
     public function find($string)
     {
         $output = '';
