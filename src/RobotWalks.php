@@ -55,6 +55,7 @@ class RobotWalks
     public function getClosedPathsCount()
     {
         //To speed up the calculation we pick one direction at the start and the mirror it to take account of all the paths if we started with another direction
+        //move function traverses the try with every node has a sum of all the leaves that have a value of 1 (1 = closed path) 
         return 2 * $this->move($this->moves-1, $this->moves, $this->moves, $this->moves, $this->moves);
     }
     
