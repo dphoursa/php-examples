@@ -32,31 +32,31 @@ class HighlyDivisibleTriangularNumberSpec extends ObjectBehavior
 {
     function it_finds_first_triangle_number_with_over_1_divisor()
     {
-        $this->find(2)->shouldReturn(3);
+        $this->find(1)->shouldReturn(3);
     }
     
     function it_finds_first_triangle_number_with_over_2_divisors()
     {
-        $this->find(3)->shouldReturn(6);
+        $this->find(2)->shouldReturn(6);
     }
 
     function it_finds_first_triangle_number_with_over_3_divisors()
     {
-        $this->find(4)->shouldReturn(6);
+        $this->find(3)->shouldReturn(6);
     }
     
     function it_finds_first_triangle_number_with_over_4_divisors()
     {
-        $this->find(5)->shouldReturn(28);
+        $this->find(4)->shouldReturn(28);
     }
     
     function it_finds_first_triangle_number_with_over_5_divisors()
     {
-        $this->find(6)->shouldReturn(28);
+        $this->find(5)->shouldReturn(28);
     }
     
     function it_finds_first_triangle_number_with_over_500_divisors()
     {
-        $this->find(501)->shouldReturn(2);
+        $this->find(500)->shouldReturn(76576500);
     }
 }

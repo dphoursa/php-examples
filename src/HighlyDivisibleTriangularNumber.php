@@ -3,11 +3,11 @@
 class HighlyDivisibleTriangularNumber
 {
 
-    public function find($max_divisors)
+    public function find($thresh_hold_divisors)
     {
-        $last_number = 0;
+        $last_number = 1;
         
-        for ($count = 0; $this->count_devisors($last_number) < $max_divisors; $count++) {
+        for ($count = 2; $this->count_devisors($last_number) <= $thresh_hold_divisors; $count++) {
             $last_number += $count;
         }
         
@@ -15,11 +15,15 @@ class HighlyDivisibleTriangularNumber
     }
     
     private function count_devisors($number) {
-        $devisors = 0;
+        if ( $number == 1) {
+            return 1;
+        }
+        
+        $devisors = 2;
 
-        for ($i = 1; $i <= $number; $i++) {
+        for ($i = 2; $i <= sqrt($number); $i++) {
             if ($number % $i == 0) {
-                $devisors++;
+                $devisors += 2;
             }
         }
         
