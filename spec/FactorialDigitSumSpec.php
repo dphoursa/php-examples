@@ -7,6 +7,8 @@ use Prophecy\Argument;
 
 /**
  * 
+ * Factorial digit sum
+ *
  * Problem 20
  * 
  * n! means n x (n - 1) x ... x 3 x 2 x 1

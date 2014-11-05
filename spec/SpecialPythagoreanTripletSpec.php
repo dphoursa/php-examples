@@ -5,8 +5,12 @@ namespace spec;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
-/*
+/**
+ *
+ * Special Pythagorean triplet
+ *
  * Problem 9
+ *
  * Published on Friday, 25th January 2002, 06:00 pm; Solved by 176305
  *
  * A Pythagorean triplet is a set of three natural numbers, a < b < c, for which,
