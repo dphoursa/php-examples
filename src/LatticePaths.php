@@ -8,7 +8,7 @@ class LatticePaths
         if ($number < 2) { 
             return 1; 
         } else { 
-            return ($number * $this->factorial($number-1)); 
+            return bcmul($number, $this->factorial($number-1)); 
         } 
     }
     
