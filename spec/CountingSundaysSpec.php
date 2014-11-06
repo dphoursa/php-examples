@@ -29,8 +29,8 @@ use Prophecy\Argument;
  */
 class CountingSundaysSpec extends ObjectBehavior
 {
-    function it_is_initializable()
+    function it_counts_sundays_that_fall_on_1st_of_a_month()
     {
-        $this->shouldHaveType('CountingSundays');
+        $this->countSundays()->shouldReturn(171);
     }
 }
