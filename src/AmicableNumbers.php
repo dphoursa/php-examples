@@ -2,7 +2,7 @@
 
 class AmicableNumbers
 {
-    public function sumProperDivisors($num)
+    public static function sumProperDivisors($num)
     {
         if ($num < 2) {
             return 0;
@@ -28,10 +28,10 @@ class AmicableNumbers
         $output = 0;
         
         for ($i = 1; $i < $threshold; $i++) {
-            $tmp = $this->sumProperDivisors($i);
+            $tmp = self::sumProperDivisors($i);
             
             if ($tmp != $i && $tmp < $threshold) {
-                if ($this->sumProperDivisors($tmp) == $i) {
+                if (self::sumProperDivisors($tmp) == $i) {
                     $output += $i;
                 }
             }

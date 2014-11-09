@@ -28,7 +28,7 @@ use Prophecy\Argument;
  */
 class NonAbundantSumsSpec extends ObjectBehavior
 {
-    function it_is_initializable()
+    function it_computes_sum_of_all_numbers_that_not_made_from_2_abundant_numbers()
     {
         $this->compute()->shouldReturn(2);
     }
