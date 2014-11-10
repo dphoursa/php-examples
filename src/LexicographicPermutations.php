@@ -17,24 +17,28 @@ class LexicographicPermutations
     
     private function permutate($numbers)
     {
-        //1. Find largest index i such that array[i - 1] < array[i].
+        //1. Find the largest index k such that a[k] < a[k + 1]. If no such index exists, the permutation is the last permutation.
         $i = count($numbers) - 1;
         while (isset($numbers[$i - 1]) && $numbers[$i - 1] >= $numbers[$i]) {
             $i--;
         }
+        
+        if ($i == 0) {
+            return $numbers;
+        }
 
-        //2. Find largest index j such that j ³ i and array[j] > array[i - 1].
+        //2. Find the largest index l greater than k such that a[k] < a[l].
         $j = count($numbers) - 1;
         while ($numbers[$j] <= $numbers[$i - 1]) {
             $j--;
         }
         
-        //3. Swap array[j] and array[i - 1].
+        //3. Swap the value of a[k] with that of a[l].
         $tmp = $numbers[$i - 1];
         $numbers[$i - 1] = $numbers[$j];
         $numbers[$j] = $tmp;
 
-        //4. Reverse the suffix starting at array[i].
+        //4. Reverse the sequence from a[k + 1] up to and including the final element a[n].
         return array_merge(array_slice($numbers, 0, $i), array_reverse(array_slice($numbers, $i), 1));
     }
 }
