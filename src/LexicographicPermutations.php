@@ -12,10 +12,6 @@ class LexicographicPermutations
      */
     public function findPermutation($numbers, $position = 0)
     {
-        if ($position == 1) {
-            return $numbers;
-        }
-        
         for ($i = 1; $i < $position; $i++) {
             $numbers = $this->permutate($numbers);
         }
