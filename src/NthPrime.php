@@ -3,7 +3,7 @@
 class NthPrime
 {
 
-    public function is_prime($number)
+    public static function is_prime($number)
     {
         for ($i = 2; sqrt($number) >= $i; $i++) {
             if ($number % $i == 0) {
@@ -22,7 +22,7 @@ class NthPrime
         $number = 1;
         while ($prime_count < $n) {
             $number++;
-            if ($this->is_prime($number)) {
+            if (self::is_prime($number)) {
                 $prime_count++;
                 $prime = $number;
             }
