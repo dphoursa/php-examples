@@ -35,6 +35,6 @@ class ConsecutivePrimeSumSpec extends ObjectBehavior
     
     function it_computes_longest_prime_below_1000000_made_up_of_consecutive_primes()
     {
-        $this->compute(1000000)->shouldReturn(953);
+        $this->compute(1000000)->shouldReturn(997651);
     }
 }
