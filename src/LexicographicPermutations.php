@@ -13,7 +13,7 @@ class LexicographicPermutations
     public function findPermutation($numbers, $position = 0)
     {
         for ($i = 1; $i < $position; $i++) {
-            $numbers = $this->permutate($numbers);
+            $numbers = self::permutate($numbers);
         }
 
         return $numbers;
@@ -26,7 +26,7 @@ class LexicographicPermutations
      * @return array|boolean Returns next permutation number array, or false if there are no higher permutations
      *
      */
-    private function permutate($numbers)
+    public static function permutate($numbers)
     {
         //1. Find the largest index k such that a[k] < a[k + 1]. If no such index exists, the permutation is the last permutation.
         $i = count($numbers) - 1;

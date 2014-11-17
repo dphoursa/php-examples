@@ -5,22 +5,29 @@ class PandigitalPrime
 
     public function compute()
     {
-        $number = 987654321;
-        while (!NthPrime::is_prime($number)) {
-            $numbers = str_split(strrev((string)$number));
+        $number = 123456789;
+        $prime = 0;
+        while (true) {
+            if(NthPrime::is_prime($number)) {
+                $prime = $number;
+            }
+            $numbers = str_split((string)$number);
             
-            $numbers = $this->permutate($numbers);
+            $numbers = LexicographicPermutations::permutate($numbers);
             
             if($numbers == false) {
-                $number = (int)strrev(substr($number, 0, -1));
-                print $number . PHP_EOL;
+                if ($prime) {
+                    break;
+                }
+                
+                $number = (int)substr(strrev($number), 0, -1);
                 continue;
             }
 
-            $number = (int)strrev(implode("", $numbers));
+            $number = (int)implode("", $numbers);
         }
 
-        return $number;
+        return $prime;
     }
     
     private function permutate($numbers)
