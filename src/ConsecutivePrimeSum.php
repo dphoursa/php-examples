@@ -1,10 +1,33 @@
 <?php
 
+/**
+ *
+ * Consecutive prime sum
+ * 
+ * Problem 50
+ * 
+ * The prime 41, can be written as the sum of six consecutive primes:
+ * 41 = 2 + 3 + 5 + 7 + 11 + 13
+ * 
+ * This is the longest sum of consecutive primes that adds to a prime below one-hundred.
+ * 
+ * The longest sum of consecutive primes below one-thousand that adds to a prime, contains 21 terms, and is equal to 953.
+ * 
+ * Which prime, below one-million, can be written as the sum of the most consecutive primes?
+ * 
+ */
 class ConsecutivePrimeSum
 {
     
+    /** @type array */
     private $storage;
     
+    /**
+     * Check if the number is prime, to speed things up we use pre generated array of primes that is stored in storage
+     *
+     * @param int $num Number to check
+     * @return boolean True if prime, false if not prime
+     */
     private function is_prime($num) {
         if (!isset($this->storage[$num])) {
                 $this->storage[$num] = NthPrime::is_prime($num);
@@ -13,6 +36,12 @@ class ConsecutivePrimeSum
         return $this->storage[$num];
     }
 
+    /**
+     * Calculate longest consecutive prime sum for primes below threshold
+     *
+     * @param int $threshold All numbers should be below this value
+     * @return int Highest sum of longest consecutive prime
+     */
     public function compute($threshold)
     {
         $this->storage = array_fill(2, $threshold - 3, 1);
