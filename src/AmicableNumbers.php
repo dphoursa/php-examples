@@ -2,6 +2,13 @@
 
 class AmicableNumbers
 {
+    
+    /**
+     * Sum all prime devisors of a number
+     * 
+     * @param int $num
+     * @return int Sum of all prime devisors
+     */
     public static function sumProperDivisors($num)
     {
         if ($num < 2) {
@@ -23,6 +30,12 @@ class AmicableNumbers
         return $output;
     }
 
+    /**
+     * Find the Sum of all amicable numbers
+     * 
+     * @param in @threshold Sum all the amicable numbers upto this threshold
+     * @return int Sum of all amicable numbers
+     */
     public function sumAmicableNumbers($threshold)
     {
         $output = 0;
